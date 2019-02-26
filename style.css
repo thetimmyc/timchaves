@@ -5,9 +5,13 @@ Description: A child theme of ContentBerg
 Author: ThemeSphere
 Author URI: http://theme-sphere.com
 Template: contentberg
-Version: 1.01
+Version: 1.02
 */
 
 input[type="submit"], button, input[type="button"], .button {
     background: #2d53fe;
+}
+
+.main-head.simple .title .logo-image {
+    margin-top: -5px; /* works better with this logo and nav positioning */
 }
