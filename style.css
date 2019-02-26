@@ -5,5 +5,9 @@ Description: A child theme of ContentBerg
 Author: ThemeSphere
 Author URI: http://theme-sphere.com
 Template: contentberg
-Version: 1.0
+Version: 1.01
 */
+
+input[type="submit"], button, input[type="button"], .button {
+    background: #2d53fe;
+}
