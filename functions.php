@@ -26,9 +26,10 @@ function my_ts_enqueue_parent() {
 function my_ts_enqueue_child() {
 
 	wp_enqueue_style(
-		'contentberg-child', 
+		'contentberg-child',
 		get_stylesheet_uri(),
-		Bunyad::options()->get_config('theme_version')
+        array(), // Added -- without this param, it was causing a bug where theme version was tied to Wordpress version (5.0.3 at time of writing this)
+        Bunyad::options()->get_config('theme_version')
 	);
 }
 
