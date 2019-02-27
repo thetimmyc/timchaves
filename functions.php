@@ -29,7 +29,7 @@ function my_ts_enqueue_child() {
 		'contentberg-child',
 		get_stylesheet_uri(),
         array(), // Added -- without this param, it was causing a bug where theme version was tied to Wordpress version (5.0.3 at time of writing this)
-        Bunyad::options()->get_config('theme_version')
+        wp_get_theme()->get('Version') // edited this to use the Version in the child style.css file
 	);
 }
 
