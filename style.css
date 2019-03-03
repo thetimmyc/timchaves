@@ -5,7 +5,7 @@ Description: A child theme of ContentBerg
 Author: ThemeSphere
 Author URI: http://theme-sphere.com
 Template: contentberg
-Version: 1.06
+Version: 1.09
 */
 
 input[type="submit"], button, input[type="button"], .button {
@@ -16,9 +16,30 @@ input[type="submit"], button, input[type="button"], .button {
     margin-top: -5px; /* works better with this logo and nav positioning */
 }
 
-/* Subscribe widget */
+/* Utilities */
+
+.ts-row.ts-row-small-gutters {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.ts-row.ts-row-small-gutters [class^='col'],
+.ts-row.ts-row-small-gutters [class*=' col'] {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* General widget customizations */
+
+.sidebar .widget-title {
+    margin-bottom: 20px;
+}
+
+/* Subscribe widget customizations */
+
 #bunyad-widget-subscribe-2 {
     box-shadow: 0 15px 45px -5px rgba(7, 10, 25, 0.25);
+    padding: 27px 27px;
 }
 
 #bunyad-widget-subscribe-2 h5.widget-title {
@@ -27,4 +48,9 @@ input[type="submit"], button, input[type="button"], .button {
 
 #bunyad-widget-subscribe-2 p {
     font-size: 13px;
+}
+
+/* Book widget customizations */
+.books-widget img {
+    box-shadow: 0 3px 15px -5px rgba(0, 0, 0, .5);
 }
