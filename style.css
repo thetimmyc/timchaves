@@ -5,7 +5,7 @@ Description: A child theme of ContentBerg
 Author: ThemeSphere
 Author URI: http://theme-sphere.com
 Template: contentberg
-Version: 1.16
+Version: 1.17
 */
 
 input[type="submit"], button, input[type="button"], .button {
@@ -75,6 +75,10 @@ input[type="submit"], button, input[type="button"], .button {
         left: 0;
         right: 0;
         z-index: 1;
+    }
+
+    .sidebar .widget-subscribe {
+        box-shadow: none;
     }
 
     .sidebar .widget-subscribe-facebook.widget-subscribe-facebook-fixed {
