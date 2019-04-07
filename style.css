@@ -5,7 +5,7 @@ Description: A child theme of ContentBerg
 Author: ThemeSphere
 Author URI: http://theme-sphere.com
 Template: contentberg
-Version: 1.21
+Version: 1.22
 */
 
 input[type="submit"], button, input[type="button"], .button {
@@ -83,6 +83,9 @@ input[type="submit"], button, input[type="button"], .button {
 
 @media only screen and (max-width: 600px) {
 
+    .sidebar .widget-subscribe .widget-title h5 {
+        font-size: 14px;
+    }
     /* Facebook widget on mobile */
     .sidebar .widget-subscribe-facebook {
         position: fixed;
@@ -103,11 +106,6 @@ input[type="submit"], button, input[type="button"], .button {
     .widget-subscribe-avatar {
         display: block;
         margin-right: 10px;
-    }
-
-    .widget-subscribe-message {
-        float: left;
-        width: 80%;
     }
 
 
@@ -140,8 +138,7 @@ input[type="submit"], button, input[type="button"], .button {
 
     /* General */
     .sidebar-widget-mobile-controls {
-        margin-top: 10px;
-        height: 20px;
+        margin-top: 15px;
         -webkit-font-smoothing: antialiased; /* for some reason wasn't applying to the emails widget */
         display: flex;
         flex-direction: row;

@@ -84,7 +84,7 @@ function followcta_widget_shortcode($atts = [], $content = null, $tag = '')
                 ' . get_avatar(get_the_author_meta('user_email'), 30) . '
                 </div>
                 <div class="widget-subscribe-message">
-                    <h5 class="widget-title">Want to know when I post something?</h5>
+                    <h5 class="widget-title">Want to know when I write something new?</h5>
                     <p class="message">Simply like my Facebook page, where I post articles when they\'re released.</p>
                     <div class="fb-like" data-href="https://www.facebook.com/thetimmyc/" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
                 </div>            
