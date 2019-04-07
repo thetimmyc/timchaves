@@ -5,7 +5,7 @@ Description: A child theme of ContentBerg
 Author: ThemeSphere
 Author URI: http://theme-sphere.com
 Template: contentberg
-Version: 1.18
+Version: 1.21
 */
 
 input[type="submit"], button, input[type="button"], .button {
@@ -16,6 +16,18 @@ input[type="submit"], button, input[type="button"], .button {
     margin-top: -5px; /* works better with this logo and nav positioning */
 }
 
+/* General custom classes */
+
+.post-title-avatar img {
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    top: 10px;
+}
+
+.widget-subscribe-avatar img {
+    border-radius: 50%;
+}
 /* Utilities */
 
 .ts-row.ts-row-small-gutters {
@@ -65,6 +77,9 @@ input[type="submit"], button, input[type="button"], .button {
 .sidebar-widget-mobile-controls {
     display: none;
 }
+.widget-subscribe-avatar {
+    display: none;
+}
 
 @media only screen and (max-width: 600px) {
 
@@ -81,8 +96,23 @@ input[type="submit"], button, input[type="button"], .button {
         box-shadow: none;
     }
 
+    .widget-subscribe-avatar-message {
+        display: flex;
+        flex-direction: row;
+    }
+    .widget-subscribe-avatar {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .widget-subscribe-message {
+        float: left;
+        width: 80%;
+    }
+
+
     .sidebar .widget-subscribe-facebook.widget-subscribe-facebook-fixed {
-        bottom: -1px;
+        bottom: 0px;
         transition: all .2s;
     }
 
@@ -100,7 +130,7 @@ input[type="submit"], button, input[type="button"], .button {
         margin-bottom: 0;
     }
     .sidebar #bunyad-widget-subscribe-2.widget-subscribe-emails-fixed {
-        bottom: -1px;
+        bottom: 0px;
         transition: all .2s;
     }
 
@@ -112,12 +142,13 @@ input[type="submit"], button, input[type="button"], .button {
     .sidebar-widget-mobile-controls {
         margin-top: 10px;
         height: 20px;
-        display: block;
         -webkit-font-smoothing: antialiased; /* for some reason wasn't applying to the emails widget */
+        display: flex;
+        flex-direction: row;
     }
 
     .sidebar-widget-mobile-controls-left {
-        float: left;
+
     }
 
     .sidebar-widget-mobile-controls-left a {
@@ -125,8 +156,8 @@ input[type="submit"], button, input[type="button"], .button {
     }
 
     .sidebar-widget-mobile-controls-right {
+        flex-grow: 1;
         text-align: right;
-        float: right;
     }
 
     .sidebar-widget-mobile-controls-right a {
