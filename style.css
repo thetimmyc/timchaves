@@ -5,7 +5,7 @@ Description: A child theme of ContentBerg
 Author: ThemeSphere
 Author URI: http://theme-sphere.com
 Template: contentberg
-Version: 1.09
+Version: 1.16
 */
 
 input[type="submit"], button, input[type="button"], .button {
@@ -31,23 +31,115 @@ input[type="submit"], button, input[type="button"], .button {
 
 /* General widget customizations */
 
-.sidebar .widget-title {
-    margin-bottom: 20px;
+.sidebar .widget-title, .sidebar .widget-subscribe .widget-title {
+    margin-bottom: 0px;
 }
 
 /* Subscribe widget customizations */
 
-#bunyad-widget-subscribe-2 {
+.sidebar .widget-subscribe {
     box-shadow: 0 15px 45px -5px rgba(7, 10, 25, 0.25);
-    padding: 27px 27px;
+    padding: 24px;
 }
 
-#bunyad-widget-subscribe-2 h5.widget-title {
+.sidebar .widget-subscribe h5.widget-title {
     line-height: 24px;
+    font-size: 15px;
 }
 
-#bunyad-widget-subscribe-2 p {
+.sidebar .widget-subscribe p.message {
     font-size: 13px;
+}
+
+.sidebar .widget-subscribe-facebook p:last-of-type {
+    margin-top: auto;
+}
+
+.sidebar .widget-subscribe-facebook .fb-like {
+    display: flex;
+    justify-content: center;
+    width: 215px !important;
+    margin-top: 15px;
+}
+
+.sidebar-widget-mobile-controls {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* Facebook widget on mobile */
+    .sidebar .widget-subscribe-facebook {
+        position: fixed;
+        bottom: -200px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .sidebar .widget-subscribe-facebook.widget-subscribe-facebook-fixed {
+        bottom: 0;
+        transition: all .2s;
+    }
+
+    .sidebar .widget-subscribe-facebook h5.widget-title, .sidebar .widget-subscribe-facebook p.message {
+        text-align: left;
+    }
+
+    /* Email widget on mobile */
+    .sidebar #bunyad-widget-subscribe-2 {
+        position: fixed;
+        bottom: -300px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        margin-bottom: 0;
+    }
+    .sidebar #bunyad-widget-subscribe-2.widget-subscribe-emails-fixed {
+        bottom: 0;
+        transition: all .2s;
+    }
+
+    .sidebar .widget-subscribe-facebook h5.widget-title, .sidebar .widget-subscribe-facebook p.message {
+        text-align: left;
+    }
+
+    /* General */
+    .sidebar-widget-mobile-controls {
+        margin-top: 10px;
+        height: 20px;
+        display: block;
+        -webkit-font-smoothing: antialiased; /* for some reason wasn't applying to the emails widget */
+    }
+
+    .sidebar-widget-mobile-controls-left {
+        float: left;
+    }
+
+    .sidebar-widget-mobile-controls-left a {
+        color: #2d53fe;
+    }
+
+    .sidebar-widget-mobile-controls-right {
+        text-align: right;
+        float: right;
+    }
+
+    .sidebar-widget-mobile-controls-right a {
+        color: #9a9a9a;
+    }
+
+    .sidebar .widget-subscribe-facebook.widget-subscribe-dismissed, .sidebar #bunyad-widget-subscribe-2.widget-subscribe-dismissed {
+        position: static;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+}
+
+.sidebar .widget-title:after {
+    display: none;
 }
 
 /* Book widget customizations */

@@ -42,6 +42,13 @@ add_action('wp_enqueue_scripts', 'my_ts_enqueue_child', 11);
 // Disable parent CSS enqueue
 add_filter('bunyad_enqueue_core_css', '__return_false');
 
+
+/* Add custom JS */
+function my_custom_scripts() {
+    wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ),'0.0',true );
+}
+add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
+
 /* Book shortcode widget */
 function books_widget_shortcode($atts = [], $content = null, $tag = '')
 {
@@ -68,11 +75,38 @@ function books_widget_shortcode($atts = [], $content = null, $tag = '')
     return $o;
 
 }
+/* Follow CTA shortcode widget */
+function followcta_widget_shortcode($atts = [], $content = null, $tag = '')
+{
+    $o = '<div class="widget widget-subscribe widget-subscribe-facebook">
+            <h5 class="widget-title">Want to know when I write something new?</h5>
+            <p class="message">The easiest way is to simply like my Facebook page, where I post articles when they\'re released.</p>
+            <div class="fb-like" data-href="https://www.facebook.com/thetimmyc/" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+            <div class="sidebar-widget-mobile-controls">
+              <div class="sidebar-widget-mobile-controls-left">
+                <a class="subscribe-widget-mobile-controls-show-emails">Or, subscribe to emails</a>
+              </div>
+              <div class="sidebar-widget-mobile-controls-right">
+                <a class="subscribe-widget-mobile-controls-dismiss">Dismiss</a>
+              </div>
+            </div>
+          </div>';
+    return $o;
+}
 
 
 function shortcodes_init()
 {
     add_shortcode('books', 'books_widget_shortcode');
+    add_shortcode('followcta', 'followcta_widget_shortcode');
 }
 
 add_action('init', 'shortcodes_init');
+
+
+/* Add Facebook SDK */
+add_action( 'bunyad_begin_body', 'insert_facebook_javascript_sdk' );
+function insert_facebook_javascript_sdk(){
+    echo '<div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=276243835727762&autoLogAppEvents=1"></script>';
+}
