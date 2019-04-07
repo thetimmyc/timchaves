@@ -82,7 +82,7 @@ input[type="submit"], button, input[type="button"], .button {
     }
 
     .sidebar .widget-subscribe-facebook.widget-subscribe-facebook-fixed {
-        bottom: 0;
+        bottom: -1px;
         transition: all .2s;
     }
 
@@ -93,14 +93,14 @@ input[type="submit"], button, input[type="button"], .button {
     /* Email widget on mobile */
     .sidebar #bunyad-widget-subscribe-2 {
         position: fixed;
-        bottom: -300px;
+        bottom: -308px;
         left: 0;
         right: 0;
         z-index: 1;
         margin-bottom: 0;
     }
     .sidebar #bunyad-widget-subscribe-2.widget-subscribe-emails-fixed {
-        bottom: 0;
+        bottom: -1px;
         transition: all .2s;
     }
 
