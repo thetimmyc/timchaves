@@ -5,7 +5,7 @@ Description: A child theme of ContentBerg
 Author: ThemeSphere
 Author URI: http://theme-sphere.com
 Template: contentberg
-Version: 1.22
+Version: 1.23
 */
 
 input[type="submit"], button, input[type="button"], .button {
@@ -177,4 +177,16 @@ input[type="submit"], button, input[type="button"], .button {
 /* Book widget customizations */
 .books-widget img {
     box-shadow: 0 3px 15px -5px rgba(0, 0, 0, .5);
+}
+
+/* Featured image caption customization */
+
+.ccfic {
+    margin-top: 10px;
+}
+
+.ccfic a {
+    color: #aaa;
+    font-size: 12px;
+    font-style: italic;
 }
