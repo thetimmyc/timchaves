@@ -5,7 +5,7 @@ Description: A child theme of ContentBerg
 Author: ThemeSphere
 Author URI: http://theme-sphere.com
 Template: contentberg
-Version: 1.23
+Version: 1.24
 */
 
 input[type="submit"], button, input[type="button"], .button {
@@ -180,7 +180,6 @@ input[type="submit"], button, input[type="button"], .button {
 }
 
 /* Featured image caption customization */
-
 .ccfic {
     margin-top: 10px;
 }
@@ -189,4 +188,13 @@ input[type="submit"], button, input[type="button"], .button {
     color: #aaa;
     font-size: 12px;
     font-style: italic;
+}
+
+/* Contact Form 7 customization */
+.wpcf7 p {
+    font-family: 'Roboto', serif;
+    color: #333;
+    font-weight: bold;
+    font-size: 13px;
+    font-style: normal;
 }
